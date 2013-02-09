@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<!-- get some html9 responsive boilerstrap -->
+<script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="moment.min.js" type="text/javascript"></script>
+<script src="coolclock.js" type="text/javascript"></script>
+<script type="text/javascript">
+function update_clock() {
+	var now = moment();
+	
+	//$('#d').text(now.format('ddd, Do MMM YYYY'));
+	//$('#t').text(now.format('HH:mm:ss'));
+	//var hue = (now.seconds() + (now.milliseconds() / 1000)) * 6;
+	//$('#t').css('color', 'hsl(' + hue + ', 100%, 50%)');
+	
+	//setTimeout('update_clock()', 100);
+}
+//setTimeout('update_clock()', 100);
+
+CoolClock.config.skins = {
+swissRail2: {
+			outerBorder:      { lineWidth: 185, radius: 1, color: "#333333", alpha: 1 },
+			smallIndicator: { lineWidth: 2, startAt: 88, endAt: 92, color: "white", alpha: 0 },
+			largeIndicator: { lineWidth: 4, startAt: 79, endAt: 92, color: "white", alpha: 1 },
+			hourHand: { lineWidth: 8, startAt: -15, endAt: 50, color: "white", alpha: 1 },
+			minuteHand: { lineWidth: 4, startAt: -15, endAt: 75, color: "white", alpha: 1 },
+			secondHand: { lineWidth: 1, startAt: -20, endAt: 85, color: "white", alpha: 1 },
+			secondDecoration: { lineWidth: 1, startAt: 70, radius: 4, fillColor: "white", color: "white", alpha: 1 }
+		},
+}
+		
+
+</script>
+
+</head>
+
+<body>
+<div id="outer">
+	<div id="cam0" class="cam">
+		<img src="http://cam0:1100/video3.mjpg">
+		<div class="camtext">cam0</div>
+	</div>
+	<div id="cam1" class="cam">
+		<img src="http://cam1:1200/video3.mjpg">
+		<div class="camtext">cam1</div>
+	</div>
+	<div id="clock">
+		<canvas id="clock1" class="CoolClock:swissRail2:200"></canvas>
+	</div>
+</div>
+</body>
+</html>

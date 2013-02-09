@@ -1,0 +1,42 @@
+body {
+	font-family: Helvetica;
+	background-color: black;
+	//background-image: url(bg.jpg);
+}
+
+#outer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 5120px;
+	height: 1024px;
+}
+
+.cam {
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+}
+
+#cam0 {
+	left: 2560px;
+	top: 0px;
+}
+
+#cam1 {
+	left: 3840px;
+	top: 0px;
+}
+
+.camtext {
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+	font-size: 30pt;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#clock {
+	width: 400px;
+}
